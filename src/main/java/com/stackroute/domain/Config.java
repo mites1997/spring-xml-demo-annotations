@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 @Configuration
-//@ComponentScan(basePackages = "com.stackroute")
+
 public class Config {
 
     @Bean
@@ -18,19 +18,13 @@ public class Config {
     @Bean
     public Actor actor1()
     {
-        return new Actor("Tim","male",32);
+        return new Actor("John","male",32);
     }
 
     @Bean
     public Actor actor2() {
-        return new Actor("John", "male", 25);
+        return new Actor("Ron", "male", 22);
     }
 
-    @Bean({"movie1","movie2"})
-    @Scope("prototype")
-    public Movie makeMovieObject()
-    {
-        Movie movie =new Movie(actor());
-        return movie;
-    }
+
 }
