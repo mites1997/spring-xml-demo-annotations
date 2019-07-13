@@ -1,6 +1,9 @@
+
 package com.stackroute;
 
 import com.stackroute.demo.BeanLifeCycleDemoBean;
+
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Config;
 import com.stackroute.domain.Movie;
 
@@ -17,8 +20,10 @@ public class Main {
         //mv.printAboutMovieActor();
         //Movie mv1=context.getBean("movie",Movie.class);
         // System.out.println(mv==mv1);
-      BeanLifeCycleDemoBean beanLifeCycleDemoBean=context.getBean(BeanLifeCycleDemoBean.class);
+        BeanLifeCycleDemoBean beanLifecycleDemoBean=context.getBean(BeanLifeCycleDemoBean.class);
         context.registerShutdownHook();
+        BeanPostProcessorDemoBean beanPostProcessorDemoBean=context.getBean(BeanPostProcessorDemoBean.class);
+
 
     }
 

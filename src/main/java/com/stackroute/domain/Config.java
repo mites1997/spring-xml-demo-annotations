@@ -2,6 +2,7 @@ package com.stackroute.domain;
 
 import com.stackroute.demo.BeanLifeCycleDemoBean;
 
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -42,5 +43,12 @@ public class Config {
         return beanLifecycleDemoBean;
 
     }
+    @Bean
+    public BeanPostProcessorDemoBean beanPostProcessorDemoBean()
+    {
+        BeanPostProcessorDemoBean beanPostProcessorDemoBean=new BeanPostProcessorDemoBean();
+        return beanPostProcessorDemoBean;
+    }
+
 
 }
